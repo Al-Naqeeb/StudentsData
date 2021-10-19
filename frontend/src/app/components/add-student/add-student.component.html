@@ -1,0 +1,16 @@
+<form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" name="name" class="form-control" [(ngModel)]="student.name">
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" name="age" class="form-control" [(ngModel)]="student.age">
+    </div>
+    <select name="gender"class="form-select mb-3" [(ngModel)]="student.gender">
+        <option selected disabled>Select Gender</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+    <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+  </form>

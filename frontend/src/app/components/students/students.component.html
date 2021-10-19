@@ -1,0 +1,23 @@
+<h1 class="h-100 text-center text-success">Students</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <th scope="row">{{ student.id }}</th>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.gender }}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-success" routerLink="/add">Add a Student</button>
+
+<app-bar-chart [studentsAgeChart]="studentsAgeChart"></app-bar-chart>
+<app-pie-chart [genderCount]="genderCount"></app-pie-chart>
